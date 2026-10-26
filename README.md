@@ -167,4 +167,54 @@ options:
 `TestSp9_ChimerasTrans.xls` Potential chimeric genes in the focal species. If the genes in the focus species are separated by commas, it is fission in the focus species; if there is only one gene in the focus species, it is fusion. The other columns represent the genes supporting this chimeric gene in other species.
 
 In the table, genes containing the word `translocation` indicate that translocation may have occurred at that position, while genes containing `*_region*::*:*-*.pep*` indicate unannotated genes.  
+
+## De-novo classifier (added in this repository)
+
+This repository extends the SNGFinder identification tool with the
+machine-learning classifier that assigns each orphan gene a
+**de-novo / old / unclassified** status, implemented by two scripts at the
+repository root:
+
+- `ModelTrain_v3.py` — trains and evaluates the classifier (XGBoost by default,
+  with an AdaCost branch for comparison) on the SNGFinder orphan output.
+- `adacost.py` — a self-contained, dependency-free implementation of the
+  cost-sensitive AdaCost classifier (Fan, Stolfo & Zhang, ICML 1999) that
+  `ModelTrain_v3.py` imports. AdaCost is vendored here because it is not on PyPI,
+  so both classifier branches reproduce from this package alone.
+
+### Usage
+
+`ModelTrain_v3.py` takes positional arguments
+`<Classifier> <Training_Dataset.csv> <Test_Dataset.csv> <Orphan_Dataset.csv>
+<prefix> <test_size> <label_col> <ppv> <npv> <max_depth> <n_estimators> <outdir>`,
+where `<Classifier>` is `XGBoost` or `AdaCost`.
+
+Examples:
+
+    # headline XGBoost model
+    python ModelTrain_v3.py \
+        XGBoost Training_Dataset.csv Test_Dataset.csv Orphan_Dataset.csv \
+        A_ppv0.95_npv0.995_30_200 0.2 A 0.95 0.995 30 200 revision_outputs
+
+    # AdaCost comparison model (requires adacost.py, vendored in this directory)
+    python ModelTrain_v3.py \
+        AdaCost Training_Dataset.csv Test_Dataset.csv Orphan_Dataset.csv \
+        A_ppv0.95_npv0.995_30_200 0.2 A 0.95 0.995 30 200 revision_outputs
+
+The classifier applies a dual-threshold abstention rule
+(`t_low` / `t_high`) so low-confidence orphans are reported as `unclassified`
+rather than forced into de-novo / old. The 59-feature set is documented in
+`Table S11` (manuscript supplementary material).
+
+## Supplementary analysis scripts (`scripts/`)
+
+`scripts/` holds the article-specific downstream analyses built on the SNGFinder
+orphan set and the classifier output. They are research scripts (not a general
+pipeline) and depend on intermediate datasets produced by the SNGFinder pipeline
+/ classifier; each script documents its expected input files (see `scripts/README.md`).
+
+- `scripts/threeway2.py` — three-way outgroup-homology audit of the orphan set
+  (de_novo_noncoding / independent_occupier / oryza_clade / old_preOryza).
+- `scripts/strata_and_audit.py` — origination-stratum analysis of the oryza_clade
+  orphans by phylogenetic depth.
 # How to cite
