@@ -1,0 +1,54 @@
+gene	class	scaffold	refseq_acc	interval_start	interval_end	n_refseq_coding	refseq_genes	per_outgroup_coding_type	flip_assessment
+OSJAP01G01810	supported_ambiguous	JH369889.2	NW_006267418.1	24287	24965	1	gene-LOC107305495	Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=?	
+OSJAP01G01810	supported_ambiguous	JH369889.2	NW_006267418.1	27211	27223	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=?	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	29715	29716	1	gene-LOC107305498	Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	29716	30145	1	gene-LOC107305498	Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	30145	30584	1	gene-LOC107305498	Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	30584	30834	1	gene-LOC107305498	Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	30834	30840	1	gene-LOC107305498	Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	30950	31133	1	gene-LOC107305498	Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	31420	31425	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	31425	31562	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	31562	31588	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	31588	31594	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	31937	32029	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	32029	32057	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	32066	32072	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G01830	supported_ambiguous	JH369889.2	NW_006267418.1	32101	32359	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP01G51420	supported_ambiguous	super0153	NW_006267533.1	3358	3367	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP02G31400	supported_direct	JH369966.2	NW_006267456.1	15054	15115	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP02G31400	supported_direct	JH369966.2	NW_006267456.1	15842	15859	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP02G31400	supported_direct	JH369966.2	NW_006267456.1	15859	15898	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP02G31400	supported_direct	JH369966.2	NW_006267456.1	16544	16545	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP02G31400	supported_direct	JH369966.2	NW_006267456.1	16547	16628	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP02G31400	supported_direct	JH369966.2	NW_006267456.1	16671	16741	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP03G18000	supported_direct	super0191	NW_006267534.1	11332	11361	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=?	
+OSJAP03G18010	supported_direct	super0191	NW_006267534.1	16417	16441	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP03G18010	supported_direct	super0191	NW_006267534.1	16444	16455	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP03G18010	supported_direct	super0191	NW_006267534.1	17650	17723	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP03G18010	supported_direct	super0191	NW_006267534.1	17723	17743	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP03G44180	supported_direct	JH369997.2	NW_006267549.1	1683	1720	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP03G44350	supported_ambiguous	JH369953.2	NW_006267467.1	26383	28206	1	gene-LOC102720944	Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP03G44350	supported_ambiguous	JH369953.2	NW_006267467.1	28206	28459	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP03G44350	supported_ambiguous	JH369953.2	NW_006267467.1	28459	28633	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP03G44350	supported_ambiguous	JH369953.2	NW_006267467.1	29199	29582	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP04G01690	supported_direct	JH369927.2	NW_006267423.1	21543	21551	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP04G18020	supported_direct	JH369994.2	NW_006267535.1	16232	16233	0		Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP05G08480	supported_ambiguous	JH369902.2	NW_006267403.1	7266	7662	1	gene-LOC102717121	Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP05G08480	supported_ambiguous	JH369902.2	NW_006267403.1	7122	7154	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP05G08480	supported_ambiguous	JH369902.2	NW_006267403.1	7032	7122	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP05G08480	supported_ambiguous	JH369902.2	NW_006267403.1	6928	7031	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP05G08480	supported_ambiguous	JH369902.2	NW_006267403.1	6912	6928	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP05G08480	supported_ambiguous	JH369902.2	NW_006267403.1	6911	6912	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP05G08480	supported_ambiguous	JH369902.2	NW_006267403.1	6102	6238	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP05G08480	supported_ambiguous	JH369902.2	NW_006267403.1	5886	6101	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP07G07920	supported_direct	super0053	NW_006267401.1	37945	38488	1	gene-LOC102714607	Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	upper_bound
+OSJAP07G07920	supported_direct	super0053	NW_006267401.1	39624	39625	1	gene-LOC102714607	Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	upper_bound
+OSJAP10G08790	supported_ambiguous	super0072	NW_006267419.1	17321	17630	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP10G08790	supported_ambiguous	super0072	NW_006267419.1	17108	17269	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP10G08790	supported_ambiguous	super0072	NW_006267419.1	16759	16970	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=gff	
+OSJAP11G11780	supported_direct	JH369869.2	NW_006267394.1	83236	83265	1	gene-LOC102722640	Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	upper_bound
+OSJAP11G12660	supported_ambiguous	JH369873.2	NW_006267389.1	54334	54682	1	gene-LOC102708861	Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=none	
+OSJAP11G17520	supported_direct	super0116	NW_006267462.1	289	303	1	gene-LOC107305512	Oryza_punctata=none|Oryza_brachyantha=none|Leersia_perrieri=none	upper_bound
+OSJAP12G02620	supported_ambiguous	super0044	NW_006267392.1	50170	50238	1	gene-LOC102716649	Oryza_punctata=gff|Oryza_brachyantha=gff|Leersia_perrieri=gff	
+OSJAP12G12650	supported_ambiguous	super0134	NW_006267508.1	4	9	0		Oryza_punctata=gff|Oryza_brachyantha=none|Leersia_perrieri=?	

@@ -1,4 +1,10 @@
 # SNGFinder
+**Note:** This repository extends
+> [PEHGP/SNGFinder](https://github.com/PEHGP/SNGFinder) (GPL-3.0). The core
+> synteny-based new-gene identification tool, its license, and its history are
+> maintained in that upstream repository. This repository additionally provides
+> the de-novo classifier and the supplementary analysis scripts described below.
+
 SNGFinder is a tool for identifying new genes based on the syntenic method. It requires a focal species (the species for which the new gene needs to be identified), species of the same lineage or genus as the focal species, and outgroup species. Syntenic regions are obtained based on whole genome alignment, and clusters of genes orthologous to the focal species genes are obtained within the same syntenic region. If a focal species gene has no orthologous genes in any outgroup in a orthologous cluster, then the gene is a new gene. In addition, SNGFinder can classify new genes into copy number variation genes, duplicate genes, and orphan genes based on the origin mechanism.
 # Installation
 ```

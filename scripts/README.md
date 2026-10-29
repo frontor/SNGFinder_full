@@ -20,5 +20,19 @@ Required inputs (set via `SNGFINDER_DATA`):
 - `Orphan_Dataset.csv`
 - `diagnosis_outputs/orphan_proba_full.npy`
 
-Other manuscript downstream analyses (functional-constraint tests, are omitted here:
+## synteny_reconstruction/
+
+Syntenic reconstruction of ancestral loci for the predicted de novo genes
+(manuscript R2.3). Reconstructs each candidate's outgroup syntenic interval and
+asks whether it is noncoding / gene-free, using two independent checks (RBH
+ortholog + outgroup GFF coding-gene overlap at the precise sub-locus). Emits a
+3-tier classification (supported_direct / supported_ambiguous / no_synteny) plus a
+RefSeq sensitivity screen for the O. brachyantha scaffold coverage gap.
+
+Required external inputs (NOT in repo; see 7.4):
+- OryzaSp11_ref_Oryza_japonica_{Blockd,Syntenicd,OrthoCluster,BitScore_threshold}.pickle
+- outgroup GFFs: Oryza_punctata.gff3 / Oryza_brachyantha.gff3 / Leersia_perrieri.gff3
+- NCBI RefSeq of GCF_000231095.1 (assembly_report.txt + genomic.gff.gz) for the screen
+
+Other manuscript downstream analyses are omitted here:
 they each depend on additional external tools (and datasets) and ad-hoc intermediate inputs and were not engineered as a standalone pipeline; available on request.

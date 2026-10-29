@@ -1,0 +1,25 @@
+# examined_genes	4018
+# genes_with_no_syntenic_block	0
+# RBH_orphan(article method: no RBH ortholog in any of 3 outgroups)	4018	(100.0%)
+# contradicted_hard(RBH ortholog in >=1 outgroup)	0	(0.0%)
+# supported_direct(no RBH, no GFF coding, >=1 outgroup noncoding interval)	1371	(34.1%)
+# no_synteny(no RBH, no GFF coding, NO outgroup syntenic counterpart)	1768	(44.0%)
+# supported_ambiguous(no RBH, but GFF coding in >=1 outgroup)	879	(21.9%)
+
+outgroup	coding(rbh)	coding(gff-only)	noncoding
+Oryza_punctata	0	667	1545
+Oryza_brachyantha	0	489	992
+Leersia_perrieri	0	510	1054
+
+# GFF coverage QC (fraction of queried outgroup block-chromosomes present in the GFF)
+# Oryza_punctata: queried_chr=12 covered_chr=12 coverage=1.000
+# Oryza_brachyantha: queried_chr=28 covered_chr=12 coverage=0.429
+# Leersia_perrieri: queried_chr=12 covered_chr=12 coverage=1.000
+
+# supported_ambiguous analysis basis (independent outgroup GFF coding hits)
+#   ambiguous genes with GFF hit in Oryza_punctata: 667
+#   ambiguous genes with GFF hit in Oryza_brachyantha: 489
+#   ambiguous genes with GFF hit in Leersia_perrieri: 510
+#   ambiguous w/ GFF hit ONLY in closest outgroup(Oryza_punctata): 237
+#   ambiguous w/ GFF hit in a DEEPER outgroup(brachyantha/perrieri): 642
+#   overlapping GFF gene biotype distribution: (unspecified)=1740
