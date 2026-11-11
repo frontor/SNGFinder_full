@@ -34,5 +34,30 @@ Required external inputs (NOT in repo; see 7.4):
 - outgroup GFFs: Oryza_punctata.gff3 / Oryza_brachyantha.gff3 / Leersia_perrieri.gff3
 - NCBI RefSeq of GCF_000231095.1 (assembly_report.txt + genomic.gff.gz) for the screen
 
+## table_S4/ — Supplementary Table S4 regeneration (t3.py chain)
+
+End-to-end regeneration of Supplementary Table S4 (996 two-sided
+Mann–Whitney tests). Includes `t3.py`, `GetTag.py` + tag lists, the 8 input
+files regenerated from raw data (6 DNA-methylation window tables, 2 FUBAR ω
+tables), the reference output `utest.xls`, and a link to the Zenodo data
+bundle holding the remaining 22 feature/avscore/omics tables. See
+`table_S4/README.md` for the verified reproduction statistics.
+
+## stringent_model/ — stringent-positive-set retraining
+
+Reproduces the 167-gene (set 1) retraining analysis: 10-fold CV AP 0.8973,
+test AP 0.9229, 2,877 / 4,241 (67.84%) predicted de novo among
+high-confidence calls. See `stringent_model/README.md`.
+
+## bootstrap/ — de novo fraction bootstrap CI
+
+`denovo_fraction_bootstrap.py`: 20,000-resample bootstrap CI of the de novo
+fraction (standard set: 78.83–81.04%). See `bootstrap/README.md`.
+
+## figure3/ — Figure 3 / Supplementary Fig. S6 scripts
+
+ω boxplots (`t_omega_boxplot.py`, gene-tree and species-tree variants) and
+feature-comparison scripts. See `figure3/README.md`.
+
 Other manuscript downstream analyses are omitted here:
 they each depend on additional external tools (and datasets) and ad-hoc intermediate inputs and were not engineered as a standalone pipeline; available on request.

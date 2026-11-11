@@ -11,9 +11,9 @@ SNGFinder is a tool for identifying new genes based on the syntenic method. It r
 git clone https://github.com/PEHGP/SNGFinder.git
 conda env create -f SNGFinder/environment.yml -n SNGFinder
 conda activate SNGFinder
-wget https://github.com/ComparativeGenomicsToolkit/cactus/releases/download/v3.1.4/cactus-bin-v3.1.4.tar.gz
-tar xvzf cactus-bin-v3.1.4.tar.gz
-cd cactus-bin-v3.1.4
+wget https://github.com/ComparativeGenomicsToolkit/cactus/releases/download/v2.6.0/cactus-bin-v2.6.0.tar.gz
+tar xvzf cactus-bin-v2.6.0.tar.gz
+cd cactus-bin-v2.6.0
 python ./setup.py install
 export PATH="$(pwd)/bin:$PATH" #important
 cd ../SNGFinder
