@@ -195,8 +195,14 @@ repository root:
 
 `ModelTrain_v3.py` takes positional arguments
 `<Classifier> <Training_Dataset.csv> <Test_Dataset.csv> <Orphan_Dataset.csv>
-<prefix> <test_size> <label_col> <ppv> <npv> <max_depth> <n_estimators> <outdir>`,
-where `<Classifier>` is `XGBoost` or `AdaCost`. The three input files used for
+<Tag> <RejectQuantile> <UCMethod> <PPV> <NPV> <MinPredPos> <MinPredNeg> <OutDir>`,
+where `<Classifier>` is `XGBoost` or `AdaCost`. `<UCMethod>` is `A` (dual
+threshold picking under PPV/NPV constraints, used for the reported runs) or
+`C` (quantile reject margin). The arguments after `<Tag>` are optional and
+default to `0.10 C 0.90 0.99 20 50 revision_outputs_<Tag>`; `<MinPredPos>` /
+`<MinPredNeg>` are the minimum numbers of out-of-fold positive / negative
+calls required for a threshold to be admissible (30 / 200 for the reported
+runs). The three input files used for
 the reported runs are deposited in `classifier_data/`, together with
 `COLUMN_MAP.tsv`, which maps the 30 pipeline column names onto the names used
 in Supplementary Tables S5, S6 and S8.
@@ -206,12 +212,12 @@ Examples:
     # headline XGBoost model
     python ModelTrain_v3.py \
         XGBoost Training_Dataset.csv Test_Dataset.csv Orphan_Dataset.csv \
-        A_ppv0.95_npv0.995_30_200 0.2 A 0.95 0.995 30 200 revision_outputs
+        A_ppv0.95_npv0.995_30_200 0.10 A 0.95 0.995 30 200 revision_outputs
 
     # AdaCost comparison model (requires adacost.py, vendored in this directory)
     python ModelTrain_v3.py \
         AdaCost Training_Dataset.csv Test_Dataset.csv Orphan_Dataset.csv \
-        A_ppv0.95_npv0.995_30_200 0.2 A 0.95 0.995 30 200 revision_outputs
+        A_ppv0.95_npv0.995_30_200 0.10 A 0.95 0.995 30 200 revision_outputs
 
 The classifier applies a dual-threshold abstention rule
 (`t_low` / `t_high`) so low-confidence orphans are reported as `unclassified`

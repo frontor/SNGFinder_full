@@ -1,3 +1,6 @@
+# Locked linux-64 export (exact build strings). On macOS/Windows, recreate the
+# environment from the package names and versions only, dropping the build
+# strings and the linux-only packages (e.g. ld_impl_linux-64).
 channels:
   - defaults
   - conda-forge
@@ -158,7 +161,7 @@ dependencies:
       - responses==0.26.0
       - ruamel-yaml==0.19.1
       - s3transfer==0.16.0
-      - shap==0.54.1           # required by ModelTrain_v3.py (imported at module level; SHAP importance)
+      - shap==0.54.1           # required by ModelTrain_v3.py (SHAP feature-importance plots; imported lazily inside the plotting function)
       - seaborn==0.13.2        # required by scripts/figure3/*.py (statistical figure aesthetics)
       - statannotations==0.7.2  # required by scripts/figure3/*.py (significance brackets)
       - toil==9.1.2
