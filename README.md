@@ -196,7 +196,10 @@ repository root:
 `ModelTrain_v3.py` takes positional arguments
 `<Classifier> <Training_Dataset.csv> <Test_Dataset.csv> <Orphan_Dataset.csv>
 <prefix> <test_size> <label_col> <ppv> <npv> <max_depth> <n_estimators> <outdir>`,
-where `<Classifier>` is `XGBoost` or `AdaCost`.
+where `<Classifier>` is `XGBoost` or `AdaCost`. The three input files used for
+the reported runs are deposited in `classifier_data/`, together with
+`COLUMN_MAP.tsv`, which maps the 30 pipeline column names onto the names used
+in Supplementary Tables S5, S6 and S8.
 
 Examples:
 
@@ -227,3 +230,17 @@ pipeline) and depend on intermediate datasets produced by the SNGFinder pipeline
 - `scripts/strata_and_audit.py` — origination-stratum analysis of the oryza_clade
   orphans by phylogenetic depth.
 # How to cite
+
+If you use SNGFinder, the classifier or the derived tables, please cite:
+
+Liu G, Li K, Shao Y, Kong L, Zhang L. Pervasive de novo origination and rapid
+turnover of new genes across the AA-genome Oryza species. *Nucleic Acids
+Research* (submitted).
+
+The Table S4 input bundle and the regenerated intermediate tables are archived
+at Zenodo: https://doi.org/10.5281/zenodo.24130664
+
+The pipeline also builds on the framework introduced in:
+
+Zhang L, Ren Y, Yang T et al. Rapid evolution of protein diversity by de novo
+origination in Oryza. *Nature Ecology & Evolution* 2019;3:679-690.

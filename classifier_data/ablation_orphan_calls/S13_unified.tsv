@@ -1,0 +1,10 @@
+Model	Features	CV AP	Test AP	Test AUC	Threshold	Orphans called de novo	n	Denominator	uc_method_used
+Full	59	0.9541	0.9671	0.9976	0.4747	81.98	5035	6142	A
+Simple_only	14	0.8932	0.9268	0.9914	0.6362	75.38	4630	6142	A
+Core_length_GC	5	0.655	0.6552	0.9658	0.8246	49.9	3065	6142	C_fallback
+Gene_architecture_only	6	0.673	0.63	0.96	0.8863	42.89	2634	6142	C_fallback
+Expression_only	18	0.5575	0.5152	0.9347	0.8569	60.57	3720	6142	C_fallback
+Chromatin_only	27	0.5515	0.5438	0.9146	0.5955	41.94	2576	6142	C_fallback
+Full_minus_expression	41	0.9143	0.9469	0.996	0.707	70.64	4339	6142	A
+Full_minus_chromatin	32	0.9569	0.954	0.995	0.6262	79.5	4883	6142	A
+Full_minus_simple	45	0.7433	0.7675	0.9622	0.3535	68.02	4178	6142	A
