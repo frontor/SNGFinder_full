@@ -1,4 +1,11 @@
 #!/usr/bin/env python
+# NOTE on the number of tests: the pairwise loops below apply the random ("Random")
+# control set in two different groupings, so the comparisons NewDup-vs-Random and
+# NewCnv-vs-Random are each evaluated twice. The script therefore prints 996 rows,
+# of which 936 are independent tests (120 rows are 60 duplicated comparisons).
+# Benjamini-Hochberg is applied to all 996 rows, which makes the correction
+# slightly conservative; de-duplicating the table does not change any
+# significance call reported in the paper.
 import pandas,itertools
 from scipy.stats import mannwhitneyu
 import numpy as np

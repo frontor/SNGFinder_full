@@ -8,21 +8,24 @@
 SNGFinder is a tool for identifying new genes based on the syntenic method. It requires a focal species (the species for which the new gene needs to be identified), species of the same lineage or genus as the focal species, and outgroup species. Syntenic regions are obtained based on whole genome alignment, and clusters of genes orthologous to the focal species genes are obtained within the same syntenic region. If a focal species gene has no orthologous genes in any outgroup in a orthologous cluster, then the gene is a new gene. In addition, SNGFinder can classify new genes into copy number variation genes, duplicate genes, and orphan genes based on the origin mechanism.
 # Installation
 ```
-git clone https://github.com/PEHGP/SNGFinder.git
-conda env create -f SNGFinder/environment.yml -n SNGFinder
+git clone https://github.com/frontor/SNGFinder_full.git
+conda env create -f SNGFinder_full/environment.yml -n SNGFinder
 conda activate SNGFinder
 wget https://github.com/ComparativeGenomicsToolkit/cactus/releases/download/v2.6.0/cactus-bin-v2.6.0.tar.gz
 tar xvzf cactus-bin-v2.6.0.tar.gz
 cd cactus-bin-v2.6.0
 python ./setup.py install
 export PATH="$(pwd)/bin:$PATH" #important
-cd ../SNGFinder
+cd ../SNGFinder_full
 python ./setup.py install
 cd ..
 ```
    
 > [!NOTE]
 > When the current Shell session is closed or exited, it is necessary to re-export PATH.
+
+> [!IMPORTANT]
+> The exact package versions used for the analyses reported in the paper are pinned in `environment.yml`; the classifier results are sensitive to the XGBoost version (2.1.4 reproduces the published per-gene probabilities bit-for-bit, whereas 3.x does not preserve the same probability calibration).
 # How to use
 Identifying new genes requires the following steps:  
 1. [Repeat masker](#1-repeat-masker)

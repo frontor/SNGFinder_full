@@ -55,3 +55,33 @@ scipy 1.17.1 (Linux, 64-bit). Against the published Table S4:
 - Feature/avscore/omics tables (Zenodo bundle): per-gene sequence,
   structural, expression, R-loop and epigenomic window features as used by
   the original analysis environment.
+
+## Number of tests and the duplicated rows
+
+`t3.py` prints 996 rows, of which **936 are independent tests**: the
+comparisons `NewDup vs. Random` and `NewCnv vs. Random` are each evaluated
+twice because the random control set is applied in two groupings
+(`("Denovo","NewDup","NewCnv","Orphan","OldSingleton")` and the two
+class-vs-random pairs). The duplicate rows are byte-identical. BH correction
+is computed over all 996 rows, which is slightly conservative; removing the
+60 duplicates does not change any significance call in the paper
+(verified independently).
+
+## Prior de novo reference set: 343 genes vs 324 positives
+
+`tags/denovo_343.txt` holds the 343 genes of the prior de novo reference set
+used for the `PriorDenovo` class in Table S4. Of these, 324 were classified as
+orphan genes in the present study and are the positives used to train and test
+the classifier (`Training_Dataset.csv`, `Test_Dataset.csv`); the remaining 19
+were assigned to other classes in this study (one duplicated gene, the rest
+unclassified) and are therefore excluded from the classifier positives. Table
+S4 uses all 343 genes for the `PriorDenovo` class; the classifier uses the
+324-orphan subset. The two numbers differ only by these 19 genes.
+
+## Statistical test variant
+
+All P values in Table S4 are two-sided Mann-Whitney U statistics computed with
+`scipy.stats.mannwhitneyu` using that function's default method selection
+(exact for small samples without ties, otherwise the normal approximation with
+continuity correction). A hand-rolled exact test or a different tie-handling
+rule will not reproduce the table to the last digit.
