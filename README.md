@@ -204,8 +204,11 @@ default to `0.10 C 0.90 0.99 20 50 revision_outputs_<Tag>`; `<MinPredPos>` /
 calls required for a threshold to be admissible (30 / 200 for the reported
 runs). The three input files used for
 the reported runs are deposited in `classifier_data/`, together with
-`COLUMN_MAP.tsv`, which maps the 30 pipeline column names onto the names used
-in Supplementary Tables S5, S6 and S8.
+`COLUMN_MAP.tsv`, which maps the 31 pipeline column names onto the names used
+in Supplementary Tables S5, S6 and S8. The fitted model for the reported run and
+its analysis configuration are deposited in `classifier_data/model/`; because
+`xgboost 2.1.4` reproduces the published probabilities bit-for-bit, the stored
+model and a fresh retraining from the deposited inputs are interchangeable.
 
 Examples:
 

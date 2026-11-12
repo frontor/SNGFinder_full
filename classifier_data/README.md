@@ -8,18 +8,28 @@ inputs without rebuilding the feature matrix from raw sequencing data.
 
 | File | Rows | Published counterpart |
 |---|---|---|
-| `Training_Dataset.csv` | 4,067 (3,849 old + 216 prior de novo, 2 rows removed later for missing gtAI) | Supplementary Table S5 |
+| `Training_Dataset.csv` | 4,067 rows (3,851 old + 216 prior de novo); 2 old rows lack gtAI and are removed before fitting, leaving 4,065 | Supplementary Table S5 |
 | `Test_Dataset.csv` | 2,034 (1,926 old + 108 prior de novo) | Supplementary Table S6 |
 | `Orphan_Dataset.csv` | 6,149 orphan genes (no `Categories` column) | Supplementary Table S8 |
 
 ## Column names
 
-Thirty of the 61 columns carry pipeline names that differ from the names used
-in the published supplementary tables (the three `Average*Length` columns and
-the 27 chromatin columns). `COLUMN_MAP.tsv` gives the one-to-one mapping;
-renaming with it reproduces the published column headers exactly, and the
-values are identical (verified on a 300-gene sample across all 59 features and
-the class label).
+Thirty-one of the 61 columns carry pipeline names that differ from the names used
+in the published supplementary tables (the three `Average*Length` columns, the 27
+chromatin columns and `Dehydration`, whose pipeline spelling `Deyhydration` is
+retained unchanged in the deposited files). `COLUMN_MAP.tsv` gives the
+one-to-one mapping; renaming with it reproduces the published column headers
+exactly, and the values are identical (verified on a 300-gene sample across all
+59 features and the class label).
+
+## Trained model
+
+`model/XGBoostModel_A_ppv0.95_npv0.995_30_200.pkl` is the fitted XGBoost model
+for the reported run (`A_ppv0.95_npv0.995_30_200`, arguments
+`0.10 A 0.95 0.995 30 200`), and `model/out_std_analysis_config.json` records the
+run configuration. The stored model reproduces the published per-gene
+probabilities of Supplementary Table S10 bit-for-bit under `xgboost 2.1.4`, and
+retraining from the three deposited inputs regenerates it identically.
 
 ## Running the classifier
 

@@ -1,0 +1,27 @@
+{
+  "TrainDataset": "Training_Dataset.csv",
+  "TestDataset": "Test_Dataset.csv",
+  "PredictDataset": "Orphan_Dataset.csv",
+  "Classifier": "XGBoost",
+  "Tag": "A_ppv0.95_npv0.995_30_200",
+  "RejectQuantile": 0.2,
+  "UCMethod": "A",
+  "PPV_target": 0.95,
+  "NPV_target": 0.995,
+  "MinPredPos": 30,
+  "MinPredNeg": 200,
+  "best_param": {
+    "learning_rate": 0.1,
+    "max_depth": 3,
+    "min_child_weight": 1,
+    "n_estimators": 200
+  },
+  "best_threshold": 0.47473299503326416,
+  "t_low": 0.3758181035518646,
+  "t_high": 0.9214155673980713,
+  "python_version": "3.13.14",
+  "sklearn_version": "1.9.1",
+  "xgboost_version": "2.1.4",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "note": "Full model path copied from original ModelTrain_v3_unclassified_AC.py; supplementary analyses appended afterwards."
+}

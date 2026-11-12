@@ -29,7 +29,9 @@ ortholog + outgroup GFF coding-gene overlap at the precise sub-locus). Emits a
 3-tier classification (supported_direct / supported_ambiguous / no_synteny) plus a
 RefSeq sensitivity screen for the O. brachyantha scaffold coverage gap.
 
-Required external inputs (NOT in repo; see 7.4):
+Required external inputs (not deposited in this repository; the Gramene OGE
+release and assembly versions used to derive them are listed in the Data
+availability section of the manuscript):
 - OryzaSp11_ref_Oryza_japonica_{Blockd,Syntenicd,OrthoCluster,BitScore_threshold}.pickle
 - outgroup GFFs: Oryza_punctata.gff3 / Oryza_brachyantha.gff3 / Leersia_perrieri.gff3
 - NCBI RefSeq of GCF_000231095.1 (assembly_report.txt + genomic.gff.gz) for the screen
