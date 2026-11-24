@@ -1,7 +1,7 @@
-# Figure 3 / Supplementary Fig. S6 analysis scripts
+# Figure 3 / Supplementary Fig. S7 analysis scripts
 
 The per-feature statistical comparisons and ω boxplots of Figure 3 and
-Supplementary Figure 6 (and the underlying Supplementary Table S4) are
+Supplementary Figure 6 (and the underlying Supplementary Table S2) are
 produced by these scripts, verbatim from the analysis environment.
 
 - `t_omega_boxplot.py` — ω boxplots for the three class sets

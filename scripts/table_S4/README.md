@@ -1,13 +1,13 @@
-# Table S4 reproduction (t3.py chain)
+# Table S2 reproduction (t3.py chain)
 
-Regenerates Supplementary Table S4 (996 pairwise two-sided Mann–Whitney U
+Regenerates Supplementary Table S2 (996 pairwise two-sided Mann–Whitney U
 tests across gene classes) end-to-end from the deposited inputs.
 
 ## Contents
 
 | Item | Description |
 |---|---|
-| `t3.py` | the S4 generation script (verbatim from the analysis environment) |
+| `t3.py` | the S2 generation script (verbatim from the analysis environment) |
 | `GetTag.py` + `tags/*.txt` | gene-class label assignment (7 gene lists) |
 | `inputs_regenerated/` | 8 input files regenerated from raw data in this study (6 DNA-methylation window tables + 2 FUBAR ω tables) |
 | `utest.xls` | reference output (996 rows; rerunning `t3.py` overwrites it in place) |
@@ -26,13 +26,13 @@ python t3.py
 ```
 
 This writes `utest.xls` (996 rows × 4 columns: Tag, Features, Alternative,
-Pvalues). The published Table S4 additionally contains Benjamini–Hochberg
+Pvalues). The published Table S2 additionally contains Benjamini–Hochberg
 adjusted values (Column E), computed across all 996 tests.
 
 ## Verified reproduction (2026-11-11)
 
 Tested environment: Python 3.11.18, numpy 1.26.4, pandas 1.5.3,
-scipy 1.17.1 (Linux, 64-bit). Against the published Table S4:
+scipy 1.17.1 (Linux, 64-bit). Against the published Table S2:
 
 - 996 / 996 rows with identical significance calls (P < 0.05)
 - 958 / 996 P values bit-identical; 989 / 996 within 1e-4 relative error
@@ -70,17 +70,17 @@ is computed over all 996 rows, which is slightly conservative; removing the
 ## Prior de novo reference set: 343 genes vs 324 positives
 
 `tags/denovo_343.txt` holds the 343 genes of the prior de novo reference set
-used for the `PriorDenovo` class in Table S4. Of these, 324 were classified as
+used for the `PriorDenovo` class in Table S2. Of these, 324 were classified as
 orphan genes in the present study and are the positives used to train and test
 the classifier (`Training_Dataset.csv`, `Test_Dataset.csv`); the remaining 19
 were assigned to other classes in this study (one duplicated gene, the rest
 unclassified) and are therefore excluded from the classifier positives. Table
-S4 uses all 343 genes for the `PriorDenovo` class; the classifier uses the
+S2 uses all 343 genes for the `PriorDenovo` class; the classifier uses the
 324-orphan subset. The two numbers differ only by these 19 genes.
 
 ## Statistical test variant
 
-All P values in Table S4 are two-sided Mann-Whitney U statistics computed with
+All P values in Table S2 are two-sided Mann-Whitney U statistics computed with
 `scipy.stats.mannwhitneyu` using that function's default method selection
 (exact for small samples without ties, otherwise the normal approximation with
 continuity correction). A hand-rolled exact test or a different tie-handling

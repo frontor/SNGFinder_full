@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Reproduce the classifier ablation table (Supplementary Table S13) and the
+"""Reproduce the classifier ablation table (Supplementary Table S5) and the
 per-model orphan calls behind it.
 
 The main classifier script (ModelTrain_v3.py) writes the performance summary of
-the ablation models (Supplementary Table S12) but stops there: it never applies
+the ablation models (Supplementary Table S11) but stops there: it never applies
 the ablated models to the orphan pool. This script fills that gap. It re-runs
 every feature family through exactly the same code path
 (ModelTrain_v3.run_original_style_subset_model: grid search, F1-optimal
@@ -11,8 +11,8 @@ threshold via TunedThresholdClassifierCV, 10-fold out-of-fold predictions),
 refits each model on the full training set, predicts the orphan pool, and writes
 
   <outdir>/<Model>_orphan_predictions.tsv   GeneID, Probability, BinaryPrediction
-  <outdir>/S13_unified.tsv                  one row per model (Table S13 columns)
-  <outdir>/verify_vs_S12.tsv                per-model diff against the S12 artifact
+  <outdir>/S13_unified.tsv                  one row per model (Table S5 columns)
+  <outdir>/verify_vs_S12.tsv                per-model diff against the S11 artifact
 
 Usage
 -----
@@ -26,7 +26,7 @@ python ablation_orphan_unify.py \
 Gene_architecture_only is the six-feature gene-architecture family
 (GeneLength, IsoformNumber, ExonNumber, AverageExonLength, AverageIntronLength,
 AverageCDSLength), i.e. `detect_feature_groups(...)["families_detailed"]
-["Gene_architecture"]`; it is not part of the S12 run because S12 summarises the
+["Gene_architecture"]`; it is not part of the S11 run because S11 summarises the
 seven feature-family models plus the matched and stringent-positive-set refits.
 """
 import argparse

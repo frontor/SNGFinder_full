@@ -12,7 +12,7 @@ high-confidence classified orphan genes, or a full prediction table with a
 (high-confidence genes only; unclassified rows must be excluded or will be
 dropped automatically).
 
-Example (reproduces the standard-set CI from the manuscript's Table S10):
+Example (reproduces the standard-set CI from the manuscript's Table S14):
     python denovo_fraction_bootstrap.py table_S10_high_confidence.tsv
 
 Output: point estimate and percentile 95% CI of the de novo fraction.

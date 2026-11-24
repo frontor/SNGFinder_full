@@ -7,19 +7,19 @@ high-confidence classified orphan genes.
 ## How to run
 
 Prepare a two-column table (Gene, Probabilities) of the high-confidence
-genes (predicted de novo and predicted old) from Supplementary Table S10,
+genes (predicted de novo and predicted old) from Supplementary Table S14,
 then:
 
 ```bash
 python denovo_fraction_bootstrap.py high_confidence.tsv --n-boot 20000
 ```
 
-Alternatively feed the full S10 prediction table: with the `Class` column
+Alternatively feed the full S14 prediction table: with the `Class` column
 (1 / 0) present, unclassified rows are dropped automatically.
 
 ## Verified reproduction (2026-11-11)
 
-From the published Table S10 (standard model, 5,026 high-confidence genes,
+From the published Table S14 (standard model, 5,026 high-confidence genes,
 4,018 predicted de novo = 79.94%):
 
 ```

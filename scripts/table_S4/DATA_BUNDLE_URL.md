@@ -1,4 +1,4 @@
-The complete input bundle (43 files, 86.7 MB) required to run the Table S4
+The complete input bundle (43 files, 86.7 MB) required to run the Table S2
 chain — the 22 per-gene feature / avscore / omics tables plus the 8
 regenerated inputs, tag lists, scripts, and the reference output — is
 deposited at:
